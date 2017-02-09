@@ -7,14 +7,39 @@ from boto.mturk import qualification
 import otree.settings
 
 
+ROOM_DEFAULTS = {}
+ROOMS = [
+    {
+        'name': 'xlab1',
+        'display_name': 'xlab1',
+    }, {
+        'name': 'xlab2',
+        'display_name': 'xlab2',
+    }, {
+        'name': 'xlab3',
+        'display_name': 'xlab3',
+    }, {
+        'name': 'xlab4',
+        'display_name': 'xlab4',
+    }, {
+        'name': 'xlab5',
+        'display_name': 'xlab5',
+    }, {
+        'name': 'xlab6',
+        'display_name': 'xlab6',
+    }, {
+        'name': 'xlab7',
+        'display_name': 'xlab7',
+    }, {
+        'name': 'xlab8',
+        'display_name': 'xlab8',
+    }
+   ]
+
+SENTRY_DSN = 'http://d0fe968b66cc427ca3ca75638abfdd53:cc0f55764d2643e4b95f6cd1f68d87a8@sentry.otree.org/115'
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# the environment variable OTREE_PRODUCTION controls whether Django runs in
-# DEBUG mode. If OTREE_PRODUCTION==1, then DEBUG=False
-if environ.get('OTREE_PRODUCTION') not in {None, '', '0'}:
-    DEBUG = False
-else:
-    DEBUG = True
+DEBUG = False
 
 ADMIN_USERNAME = 'admin'
 
